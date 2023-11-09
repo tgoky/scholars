@@ -19,7 +19,8 @@ import {
   DIFFICULTY,
   QUESTIONS_TYPE,
   COUNTDOWN_TIME,
-  GRADE_LEVEL
+  GRADE_LEVEL,
+  NATIONALITY
 } from '../../constants';
 import { shuffle } from '../../utils';
 
@@ -36,6 +37,7 @@ const Registration = ({ startQuiz }) => {
     seconds: 0,
   });
   const [numOfGrades, setNumOfGrades] = useState('')
+  const [ nationality, setNationality] = useState('')
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState(null);
   const [offline, setOffline] = useState(false);
@@ -179,11 +181,11 @@ const Registration = ({ startQuiz }) => {
                   fluid
                   selection
                   name="numOfQ"
-                  placeholder="Select No. of Questions"
-                  header="Select No. of Questions"
-                  options={NUM_OF_QUESTIONS}
-                  value={numOfQuestions}
-                  onChange={(e, { value }) => setNumOfQuestions(value)}
+                  placeholder="Select Nationality"
+                  header="Select Nationality"
+                  options={NATIONALITY}
+                  value={nationality}
+                  onChange={(e, { value }) => setNationality(value)}
                   disabled={processing}
                 />
 
