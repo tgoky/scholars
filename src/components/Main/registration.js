@@ -137,29 +137,13 @@ const Registration = ({ startQuiz }) => {
                 />
                 <br />
                 <p>Student Middle Name</p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="numOfQ"
-                  placeholder="Select No. of Questions"
-                  header="Select No. of Questions"
-                  options={NUM_OF_QUESTIONS}
-                  value={numOfQuestions}
-                  onChange={(e, { value }) => setNumOfQuestions(value)}
-                  disabled={processing}
+                <TextArea
+                  
                 />
                 <br />
                 <p>Student Last Name</p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="numOfQ"
-                  placeholder="Select No. of Questions"
-                  header="Select No. of Questions"
-                  options={NUM_OF_QUESTIONS}
-                  value={numOfQuestions}
-                  onChange={(e, { value }) => setNumOfQuestions(value)}
-                  disabled={processing}
+                <TextArea
+                
                 />
                 <br />
                 <p>Gender</p>
