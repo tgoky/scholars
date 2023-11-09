@@ -147,7 +147,8 @@ const Registration = ({ startQuiz }) => {
                 <br />
                 <p>Student Last Name</p>
                 <TextArea
-                
+                  width={200}
+                  style={{ width: '300px', height: '30px'}}
                 />
                 <br />
                 <p>Gender</p>
