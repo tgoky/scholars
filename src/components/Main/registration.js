@@ -19,6 +19,7 @@ import {
   DIFFICULTY,
   QUESTIONS_TYPE,
   COUNTDOWN_TIME,
+  GRADE_LEVEL
 } from '../../constants';
 import { shuffle } from '../../utils';
 
@@ -26,7 +27,7 @@ import Offline from '../Offline';
 
 const Registration = ({ startQuiz }) => {
   const [category, setCategory] = useState('0');
-  const [numOfQuestions, setNumOfQuestions] = useState('Male');
+  const [numOfQuestions, setNumOfQuestions] = useState('');
   const [difficulty, setDifficulty] = useState('easy');
   const [questionsType, setQuestionsType] = useState('0');
   const [countdownTime, setCountdownTime] = useState({
@@ -34,6 +35,7 @@ const Registration = ({ startQuiz }) => {
     minutes: 120,
     seconds: 0,
   });
+  const [numOfGrades, setNumOfGrades] = useState()
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState(null);
   const [offline, setOffline] = useState(false);
@@ -152,7 +154,7 @@ const Registration = ({ startQuiz }) => {
                   selection
                   name="numOfQ"
                   placeholder="M/F"
-                  header="Male"
+                  header="Select Gender"
                   options={NUM_OF_QUESTIONS}
                   value={numOfQuestions}
                   onChange={(e, { value }) => setNumOfQuestions(value)}
@@ -164,9 +166,9 @@ const Registration = ({ startQuiz }) => {
                   fluid
                   selection
                   name="numOfQ"
-                  placeholder="Select No. of Questions"
-                  header="Select No. of Questions"
-                  options={NUM_OF_QUESTIONS}
+                  placeholder="Select Grade Level"
+                  header="Select Grade Level"
+                  options={GRADE_LEVEL}
                   value={numOfQuestions}
                   onChange={(e, { value }) => setNumOfQuestions(value)}
                   disabled={processing}
