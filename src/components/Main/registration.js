@@ -35,7 +35,7 @@ const Registration = ({ startQuiz }) => {
     minutes: 120,
     seconds: 0,
   });
-  const [numOfGrades, setNumOfGrades] = useState()
+  const [numOfGrades, setNumOfGrades] = useState('')
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState(null);
   const [offline, setOffline] = useState(false);
@@ -169,8 +169,8 @@ const Registration = ({ startQuiz }) => {
                   placeholder="Select Grade Level"
                   header="Select Grade Level"
                   options={GRADE_LEVEL}
-                  value={numOfQuestions}
-                  onChange={(e, { value }) => setNumOfQuestions(value)}
+                  value={numOfGrades}
+                  onChange={(e, { value }) => setNumOfGrades(value)}
                   disabled={processing}
                 />
                 <br />

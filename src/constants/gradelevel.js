@@ -2,32 +2,27 @@ const GRADE_LEVEL = [
 
         {
           key: 'grade-one',
-          text: 'Grade-one(1)',
+          text: 'First Grade - Elementary, Primary',
           value: 'grade-one',
         },
         {
             key: 'grade-two',
-            text: 'Grade-two(2)',
+            text: 'Second Grade - Elementary, Primary',
             value: 'grade-two',
           },
           {
-            key: 'grade-one',
-            text: 'Grade-one(1)',
-            value: 'grade-one',
-          },
-          {
             key: 'grade-three',
-            text: 'Grade-three(3)',
+            text: 'Third Grade - Elementary, Primary',
             value: 'grade-three',
           },
           {
             key: 'grade-four',
-            text: 'Grade-four(4)',
+            text: 'Fourth Grade - Elementary, Primary',
             value: 'grade-four',
           },
           {
             key: 'grade-five',
-            text: 'Grade-five(5)',
+            text: 'Fifth Grade  - Elementary, Primary',
             value: 'grade-five',
           },
           {
