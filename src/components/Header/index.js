@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <Menu stackable inverted>
       <Menu.Item header>
-        <h1>MasterCard Scholarships</h1>
+        <h1 style={{color: 'orange'}}>MasterCard Foundation Scholars Examination</h1>
       </Menu.Item>
       {promptEvent && !isAppInstalled && (
         <Menu.Item position="right">

@@ -10,7 +10,8 @@ import {
   Message,
 } from 'semantic-ui-react';
 
-import mindImg from '../../images/mind.svg';
+// import mindImg from '../../images/mind.svg';
+import msLogo from '../../images/mastercardscholarslogo.png'
 
 import {
   CATEGORIES,
@@ -117,10 +118,10 @@ const Main = ({ startQuiz }) => {
       <Segment>
         <Item.Group divided>
           <Item>
-            <Item.Image src={mindImg} />
+            <Item.Image src={msLogo} />
             <Item.Content>
               <Item.Header>
-                <h1>The Ultimate Trivia Quiz</h1>
+                <h1>MasterCard Foundation Scholars Examination</h1>
               </Item.Header>
               {error && (
                 <Message error onDismiss={() => setError(null)}>
@@ -224,7 +225,7 @@ const Main = ({ startQuiz }) => {
                   size="big"
                   icon="play"
                   labelPosition="left"
-                  content={processing ? 'Processing...' : 'Play Now'}
+                  content={processing ? 'Processing...' : 'Start Examination'}
                   onClick={fetchData}
                   disabled={!allFieldsSelected || processing}
                 />
