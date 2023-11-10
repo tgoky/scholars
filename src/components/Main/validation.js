@@ -18,7 +18,8 @@ import {
   GRADE_LEVEL,
   NUM_OF_QUESTIONS,
   NATIONALITY,
-  GENDER
+  GENDER,
+  PROFICIENCY
 } from '../../constants';
 import { shuffle } from '../../utils';
 
@@ -41,7 +42,7 @@ const Validation = ({ startQuiz }) => {
   const [offline, setOffline] = useState(false);
   const [showMainContent, setShowMainContent] = useState(false);
   const [genderDisplay, setGenderDisplay] = useState('');
-
+  const [ proficiencyDisplay, setProficiencyDisplay ] = useState('');
 
   const handleTimeChange = (e, { name, value }) => {
     setCountdownTime({ ...countdownTime, [name]: value });
@@ -161,11 +162,11 @@ const Validation = ({ startQuiz }) => {
                     fluid
                     selection
                     name="numOfQ"
-                    placeholder="M/F"
-                    header="Select Gender"
-                    options={GENDER}
-                    value={genderDisplay}
-                    onChange={(e, { value }) => setGenderDisplay(value)}
+                    placeholder="Proficiency Level"
+                    header="Select Proficiency Level"
+                    options={PROFICIENCY}
+                    value={proficiencyDisplay}
+                    onChange={(e, { value }) => setProficiencyDisplay(value)}
                     disabled={processing}
                   />
                   <br />
