@@ -203,6 +203,7 @@ const Registration = ({ startQuiz }) => {
                     size="big"
                     icon="play"
                     labelPosition="left"
+                    style={{ backgroundColor: 'orange'}}
                     content={'Submit'}
                     onClick={loadMain}
                     disabled={!allFieldsSelected || processing}

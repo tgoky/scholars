@@ -227,6 +227,7 @@ const Main = ({ startQuiz }) => {
                   labelPosition="left"
                   content={processing ? 'Processing...' : 'Start Examination'}
                   onClick={fetchData}
+                  style={{ backgroundColor: 'red'}}
                   disabled={!allFieldsSelected || processing}
                 />
               </Item.Extra>
