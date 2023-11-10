@@ -46,7 +46,6 @@ const Registration = ({ startQuiz }) => {
 
   const loadMain = () => {
     setShowMainContent(true);
-    setShowRegContent(false);
   };
 
   let allFieldsSelected = false;
@@ -122,100 +121,101 @@ const Registration = ({ startQuiz }) => {
 
   return (
     <Container>
-      <Segment>
-        <Item.Group divided>
-          <Item>
-            <Item.Image src={mindImg} />
-            <Item.Content>
-              <Item.Header>
-                <h1>MasterCard Scholarships Registration</h1>
-              </Item.Header>
-              {error && (
-                <Message error onDismiss={() => setError(null)}>
-                  <Message.Header>Error!</Message.Header>
-                  {error.message}
-                </Message>
-              )}
-              <Divider />
-              <Item.Meta>
-                <p>Student Legal First Name</p>
-                <TextArea
-                   style={{ width: '300px', height: '30px'}}
-                />
-                <br />
-                <p>Student Middle Name</p>
-                <TextArea
-                   style={{ width: '300px', height: '30px'}}
-                />
-                <br />
-                <p>Student Last Name</p>
-                <TextArea
-                  style={{ width: '300px', height: '30px'}}
-                />
-                <br />
-                <p>Gender</p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="numOfQ"
-                  placeholder="M/F"
-                  header="Select Gender"
-                  options={NUM_OF_QUESTIONS}
-                  value={numOfQuestions}
-                  onChange={(e, { value }) => setNumOfQuestions(value)}
-                  disabled={processing}
-                />
-                <br />
-                <p>Grade Level</p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="numOfQ"
-                  placeholder="Select Grade Level"
-                  header="Select Grade Level"
-                  options={GRADE_LEVEL}
-                  value={numOfGrades}
-                  onChange={(e, { value }) => setNumOfGrades(value)}
-                  disabled={processing}
-                />
-                <br />
-                <p>Nationality</p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="numOfQ"
-                  placeholder="Select Nationality"
-                  header="Select Nationality"
-                  options={NATIONALITY}
-                  value={nationality}
-                  onChange={(e, { value }) => setNationality(value)}
-                  disabled={processing}
-                />
-
-                <br />
-              </Item.Meta>
-              <Divider />
-              <Item.Extra>
-              <Button
-  primary
-  size="big"
-  icon="play"
-  labelPosition="left"
-  content={'Play Now'}
-  onClick={loadMain}
-  disabled={!allFieldsSelected || processing}
-/>
-  {/* Conditionally render Main content */}
-  {showMainContent && <Main />}
-
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-        </Item.Group>
-      </Segment>
+      {showMainContent ? (
+        <Main />
+      ) : (
+        <Segment>
+          <Item.Group divided>
+            <Item>
+              <Item.Image src={mindImg} />
+              <Item.Content>
+                <Item.Header>
+                  <h1>MasterCard Scholarships Registration</h1>
+                </Item.Header>
+                {error && (
+                  <Message error onDismiss={() => setError(null)}>
+                    <Message.Header>Error!</Message.Header>
+                    {error.message}
+                  </Message>
+                )}
+                <Divider />
+                <Item.Meta>
+                  <p>Student Legal First Name</p>
+                  <TextArea
+                    style={{ width: '300px', height: '30px' }}
+                  />
+                  <br />
+                  <p>Student Middle Name</p>
+                  <TextArea
+                    style={{ width: '300px', height: '30px' }}
+                  />
+                  <br />
+                  <p>Student Last Name</p>
+                  <TextArea
+                    style={{ width: '300px', height: '30px' }}
+                  />
+                  <br />
+                  <p>Gender</p>
+                  <Dropdown
+                    fluid
+                    selection
+                    name="numOfQ"
+                    placeholder="M/F"
+                    header="Select Gender"
+                    options={NUM_OF_QUESTIONS}
+                    value={numOfQuestions}
+                    onChange={(e, { value }) => setNumOfQuestions(value)}
+                    disabled={processing}
+                  />
+                  <br />
+                  <p>Grade Level</p>
+                  <Dropdown
+                    fluid
+                    selection
+                    name="numOfQ"
+                    placeholder="Select Grade Level"
+                    header="Select Grade Level"
+                    options={GRADE_LEVEL}
+                    value={numOfGrades}
+                    onChange={(e, { value }) => setNumOfGrades(value)}
+                    disabled={processing}
+                  />
+                  <br />
+                  <p>Nationality</p>
+                  <Dropdown
+                    fluid
+                    selection
+                    name="numOfQ"
+                    placeholder="Select Nationality"
+                    header="Select Nationality"
+                    options={NATIONALITY}
+                    value={nationality}
+                    onChange={(e, { value }) => setNationality(value)}
+                    disabled={processing}
+                  />
+                  <br />
+                </Item.Meta>
+                <Divider />
+                <Item.Extra>
+                  <Button
+                    primary
+                    size="big"
+                    icon="play"
+                    labelPosition="left"
+                    content={'Play Now'}
+                    onClick={loadMain}
+                    disabled={!allFieldsSelected || processing}
+                  />
+                </Item.Extra>
+              </Item.Content>
+            </Item>
+          </Item.Group>
+        </Segment>
+      )}
       <br />
     </Container>
   );
+  
 };
 
 Registration.propTypes = {
