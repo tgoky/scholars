@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Layout from '../Layout';
 import Loader from '../Loader';
-// import Main from '../Main';
+import Main from '../Main';
 import Quiz from '../Quiz';
 import Result from '../Result';
 
@@ -91,7 +91,13 @@ const App = () => {
     <Layout>
       {loading && <Loader {...loadingMessage} />}
       {!loading && !isQuizStarted && !isQuizCompleted && (
-        <Registration startQuiz={startQuiz} />
+        <Registration  />
+        
+        //should be main ..
+      )}
+        {!loading && !isQuizStarted && !isQuizCompleted && (
+        <Main startQuiz={startQuiz} />
+        
         //should be main ..
       )}
       {!loading && isQuizStarted && (

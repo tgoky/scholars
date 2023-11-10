@@ -1,8 +1,7 @@
 
-
 const GENDER = [
-    { key: 'male', text: 'Male', value: 'Male' },
-    { key: 'female', text: 'Female', value: 'Female' }
+    { key: 'male', text: 'Male', value: 'male' },
+    { key: 'female', text: 'Female', value: 'female' }
   ];
   
 

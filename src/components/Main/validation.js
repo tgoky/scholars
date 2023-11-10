@@ -24,7 +24,7 @@ import { shuffle } from '../../utils';
 
 import Offline from '../Offline';
 
-const Registration = ({ startQuiz }) => {
+const Validation = ({ startQuiz }) => {
   const [category, setCategory] = useState('0');
   const [numOfQuestions, setNumOfQuestions] = useState('');
   const [difficulty, setDifficulty] = useState('easy');
@@ -219,8 +219,8 @@ const Registration = ({ startQuiz }) => {
   
 };
 
-Registration.propTypes = {
+Validation.propTypes = {
   startQuiz: PropTypes.func.isRequired,
 };
 
-export default Registration;
+export default Validation;
