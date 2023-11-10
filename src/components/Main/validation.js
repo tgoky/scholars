@@ -177,9 +177,23 @@ const Validation = ({ startQuiz }) => {
                   name="TOEFL"
                   />
                    <Checkbox
-                  label="TOEFL"
-                  name="TOEFL"
+                  label="ICGSE"
+                  name="ICGSE"
+                  /> 
+                  <Checkbox
+                  label="IELTS"
+                  name="IELTS"
                   />
+                   <Checkbox
+                  label="LSAT"
+                  name="LSAT"
+                  />
+                   <Checkbox
+                  label="PTE"
+                  name="PTE"
+                  />
+
+
 
                   <br />
                   <p>Nationality</p>
