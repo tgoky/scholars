@@ -192,9 +192,7 @@ const Validation = ({ startQuiz }) => {
                   label="PTE"
                   name="PTE"
                   />
-
-
-
+                  <br />
                   <br />
                   <p>Nationality</p>
                   <Dropdown
@@ -232,6 +230,8 @@ const Validation = ({ startQuiz }) => {
   );
   
 };
+
+//updated
 
 Validation.propTypes = {
   startQuiz: PropTypes.func.isRequired,
