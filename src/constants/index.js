@@ -6,3 +6,4 @@ export { default as QUESTIONS_TYPE } from './questionsType';
 export { default as GRADE_LEVEL } from  './gradelevel';
 export { default as NATIONALITY } from './nationality';
 export { default as GENDER } from './gender';
+export { default as PROFICIENCY } from './proficiency';

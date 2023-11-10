@@ -1,24 +1,34 @@
 const PROFICIENCY = [
     {
-      key: '0',
-      text: 'Any Difficulty',
-      value: '0',
+      key: 'a1',
+      text: 'A1 - Beginner',
+      value: 'a1',
     },
     {
-      key: 'easy',
-      text: 'Easy',
-      value: 'easy',
+      key: 'a2',
+      text: 'A2 - Elementary',
+      value: 'a2',
     },
     {
-      key: 'medium',
-      text: 'Medium',
-      value: 'medium',
+      key: 'b1',
+      text: 'B1 - Intermediate',
+      value: 'b1',
     },
     {
-      key: 'hard',
-      text: 'Hard',
-      value: 'hard',
+      key: 'b2',
+      text: 'B2 - Upper Intermediate',
+      value: 'b2',
     },
+    {
+        key: 'c1',
+        text: 'C1 - Advanced',
+        value: 'c1',
+      },
+      {
+        key: 'c2',
+        text: 'C2 - Proficient',
+        value: 'c2',
+      },
   ];
   
   export default PROFICIENCY;
