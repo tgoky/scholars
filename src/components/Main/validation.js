@@ -141,22 +141,22 @@ const Validation = ({ startQuiz }) => {
                 )}
                 <Divider />
                 <Item.Meta>
-                  <p>Student Legal First Name</p>
+                  <p>What are your Career Aspirations?</p>
                   <TextArea
-                    style={{ width: '300px', height: '30px' }}
+                    style={{ width: '300px', height: '70px' }}
                   />
                   <br />
-                  <p>Student Middle Name</p>
+                  <p>What are some challenges you currently face as an individual</p>
                   <TextArea
-                    style={{ width: '300px', height: '30px' }}
+                    style={{ width: '300px', height: '70px' }}
                   />
                   <br />
-                  <p>Student Last Name</p>
+                  <p>What tools or resources are needed for you to foster your development</p>
                   <TextArea
-                    style={{ width: '300px', height: '30px' }}
+                    style={{ width: '300px', height: '70px' }}
                   />
                   <br />
-                  <p>Gender</p>
+                  <p>English Proficiency</p>
                   <Dropdown
                     fluid
                     selection
