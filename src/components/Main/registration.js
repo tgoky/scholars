@@ -14,6 +14,7 @@ import {
 import mindImg from '../../images/mind.svg';
 import msLogo from '../../images/mastercardscholarslogo.png'
 import Main from '../Main';
+import Validation from './validation';
 import {
   GRADE_LEVEL,
   NUM_OF_QUESTIONS,
@@ -123,7 +124,7 @@ const Registration = ({ startQuiz }) => {
   return (
     <Container>
       {showMainContent ? (
-        <Main />
+        <Validation />
       ) : (
         <Segment>
           <Item.Group divided>

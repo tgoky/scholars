@@ -8,7 +8,8 @@ import {
   Divider,
   Button,
   Message,
-  TextArea
+  TextArea,
+  Checkbox
 } from 'semantic-ui-react';
 
 import mindImg from '../../images/mind.svg';
@@ -144,20 +145,20 @@ const Validation = ({ startQuiz }) => {
                 <Item.Meta>
                   <p>What are your Career Aspirations?</p>
                   <TextArea
-                    style={{ width: '300px', height: '70px' }}
+                    style={{ width: '700px', height: '50px' }}
                   />
                   <br />
                   <p>What are some challenges you currently face as an individual</p>
                   <TextArea
-                    style={{ width: '300px', height: '70px' }}
+                    style={{ width: '700px', height: '50px' }}
                   />
                   <br />
                   <p>What tools or resources are needed for you to foster your development</p>
                   <TextArea
-                    style={{ width: '300px', height: '70px' }}
+                    style={{ width: '700px', height: '50px' }}
                   />
                   <br />
-                  <p>English Proficiency</p>
+                  <p>English Proficiency Level</p>
                   <Dropdown
                     fluid
                     selection
@@ -170,18 +171,16 @@ const Validation = ({ startQuiz }) => {
                     disabled={processing}
                   />
                   <br />
-                  <p>Grade Level</p>
-                  <Dropdown
-                    fluid
-                    selection
-                    name="numOfQ"
-                    placeholder="Select Grade Level"
-                    header="Select Grade Level"
-                    options={GRADE_LEVEL}
-                    value={numOfGrades}
-                    onChange={(e, { value }) => setNumOfGrades(value)}
-                    disabled={processing}
+                  <p>Current School Examination Partnerships</p>
+                  <Checkbox
+                  label="TOEFL"
+                  name="TOEFL"
                   />
+                   <Checkbox
+                  label="TOEFL"
+                  name="TOEFL"
+                  />
+
                   <br />
                   <p>Nationality</p>
                   <Dropdown
