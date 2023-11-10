@@ -12,6 +12,7 @@ import {
 } from 'semantic-ui-react';
 
 import mindImg from '../../images/mind.svg';
+import msLogo from '../../images/mastercardscholarslogo.png'
 import Main from '../Main';
 import {
   NUM_OF_QUESTIONS,
@@ -127,7 +128,7 @@ const Registration = ({ startQuiz }) => {
         <Segment>
           <Item.Group divided>
             <Item>
-              <Item.Image src={mindImg} />
+              <Item.Image src={msLogo} />
               <Item.Content>
                 <Item.Header>
                   <h1>MasterCard Scholarships Registration</h1>
