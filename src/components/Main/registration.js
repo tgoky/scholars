@@ -12,13 +12,9 @@ import {
 } from 'semantic-ui-react';
 
 import mindImg from '../../images/mind.svg';
-
+import Main from '../Main';
 import {
-  CATEGORIES,
   NUM_OF_QUESTIONS,
-  DIFFICULTY,
-  QUESTIONS_TYPE,
-  COUNTDOWN_TIME,
   GRADE_LEVEL,
   NATIONALITY
 } from '../../constants';
@@ -41,9 +37,16 @@ const Registration = ({ startQuiz }) => {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState(null);
   const [offline, setOffline] = useState(false);
+  const [showMainContent, setShowMainContent] = useState(false);
+
 
   const handleTimeChange = (e, { name, value }) => {
     setCountdownTime({ ...countdownTime, [name]: value });
+  };
+
+  const loadMain = () => {
+    setShowMainContent(true);
+    setShowRegContent(false);
   };
 
   let allFieldsSelected = false;
@@ -125,7 +128,7 @@ const Registration = ({ startQuiz }) => {
             <Item.Image src={mindImg} />
             <Item.Content>
               <Item.Header>
-                <h1>MasterCard Scholarships</h1>
+                <h1>MasterCard Scholarships Registration</h1>
               </Item.Header>
               {error && (
                 <Message error onDismiss={() => setError(null)}>
@@ -137,17 +140,16 @@ const Registration = ({ startQuiz }) => {
               <Item.Meta>
                 <p>Student Legal First Name</p>
                 <TextArea
-                  
+                   style={{ width: '300px', height: '30px'}}
                 />
                 <br />
                 <p>Student Middle Name</p>
                 <TextArea
-                  
+                   style={{ width: '300px', height: '30px'}}
                 />
                 <br />
                 <p>Student Last Name</p>
                 <TextArea
-                  width={200}
                   style={{ width: '300px', height: '30px'}}
                 />
                 <br />
@@ -194,15 +196,18 @@ const Registration = ({ startQuiz }) => {
               </Item.Meta>
               <Divider />
               <Item.Extra>
-                <Button
-                  primary
-                  size="big"
-                  icon="play"
-                  labelPosition="left"
-                  content={processing ? 'Processing...' : 'Play Now'}
-                  onClick={fetchData}
-                  disabled={!allFieldsSelected || processing}
-                />
+              <Button
+  primary
+  size="big"
+  icon="play"
+  labelPosition="left"
+  content={'Play Now'}
+  onClick={loadMain}
+  disabled={!allFieldsSelected || processing}
+/>
+  {/* Conditionally render Main content */}
+  {showMainContent && <Main />}
+
               </Item.Extra>
             </Item.Content>
           </Item>
