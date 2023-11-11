@@ -131,20 +131,20 @@ const Main = ({ startQuiz }) => {
               )}
               <Divider />
               <Item.Meta>
-                <p>In which category do you want to play the quiz?</p>
+                <p>Candidates Area of Interest for the Scholars Exam</p>
                 <Dropdown
                   fluid
                   selection
                   name="category"
-                  placeholder="Select Quiz Category"
-                  header="Select Quiz Category"
+                  placeholder="Select Scholars Category"
+                  header="Select Scholars Category"
                   options={CATEGORIES}
                   value={category}
                   onChange={(e, { value }) => setCategory(value)}
                   disabled={processing}
                 />
                 <br />
-                <p>How many questions do you want in your quiz?</p>
+                <p>Scholars Question Length</p>
                 <Dropdown
                   fluid
                   selection
@@ -157,20 +157,20 @@ const Main = ({ startQuiz }) => {
                   disabled={processing}
                 />
                 <br />
-                <p>How difficult do you want your quiz to be?</p>
+                <p>Scholars School Module</p>
                 <Dropdown
                   fluid
                   selection
                   name="difficulty"
-                  placeholder="Select Difficulty Level"
-                  header="Select Difficulty Level"
+                  placeholder="Select School Module"
+                  header="Select School Module"
                   options={DIFFICULTY}
                   value={difficulty}
                   onChange={(e, { value }) => setDifficulty(value)}
                   disabled={processing}
                 />
                 <br />
-                <p>Which type of questions do you want in your quiz?</p>
+                <p>Scholars Examination Mode</p>
                 <Dropdown
                   fluid
                   selection
@@ -184,28 +184,7 @@ const Main = ({ startQuiz }) => {
                 />
                 <br />
                 <p>Please select the countdown time for your quiz.</p>
-                <Dropdown
-                  search
-                  selection
-                  name="hours"
-                  placeholder="Select Hours"
-                  header="Select Hours"
-                  options={COUNTDOWN_TIME.hours}
-                  value={countdownTime.hours}
-                  onChange={handleTimeChange}
-                  disabled={processing}
-                />
-                <Dropdown
-                  search
-                  selection
-                  name="minutes"
-                  placeholder="Select Minutes"
-                  header="Select Minutes"
-                  options={COUNTDOWN_TIME.minutes}
-                  value={countdownTime.minutes}
-                  onChange={handleTimeChange}
-                  disabled={processing}
-                />
+               
                 <Dropdown
                   search
                   selection

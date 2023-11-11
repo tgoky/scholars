@@ -132,7 +132,7 @@ const Registration = ({ startQuiz }) => {
               <Item.Image src={msLogo} />
               <Item.Content>
                 <Item.Header>
-                  <h1>MasterCard Scholarships Registration</h1>
+                  <h1>MasterCard Scholarships Registration - BIO DATA</h1>
                 </Item.Header>
                 {error && (
                   <Message error onDismiss={() => setError(null)}>

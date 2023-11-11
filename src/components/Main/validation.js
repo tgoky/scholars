@@ -133,7 +133,7 @@ const Validation = ({ startQuiz }) => {
               <Item.Image src={msLogo} />
               <Item.Content>
                 <Item.Header>
-                  <h1>MasterCard Scholarships Registration</h1>
+                  <h1>MasterCard Scholarships Registration - BIO DATA</h1>
                 </Item.Header>
                 {error && (
                   <Message error onDismiss={() => setError(null)}>
@@ -158,18 +158,6 @@ const Validation = ({ startQuiz }) => {
                     style={{ width: '700px', height: '50px' }}
                   />
                   <br />
-                  <p>English Proficiency Level</p>
-                  <Dropdown
-                    fluid
-                    selection
-                    name="numOfQ"
-                    placeholder="Proficiency Level"
-                    header="Select Proficiency Level"
-                    options={PROFICIENCY}
-                    value={proficiencyDisplay}
-                    onChange={(e, { value }) => setProficiencyDisplay(value)}
-                    disabled={processing}
-                  />
                   <br />
                   <p>Current School Examination Partnerships</p>
                   <Checkbox
@@ -194,19 +182,35 @@ const Validation = ({ startQuiz }) => {
                   />
                   <br />
                   <br />
-                  <p>Nationality</p>
-                  <Dropdown
-                    fluid
-                    selection
-                    name="numOfQ"
-                    placeholder="Select Nationality"
-                    header="Select Nationality"
-                    options={NATIONALITY}
-                    value={nationality}
-                    onChange={(e, { value }) => setNationality(value)}
-                    disabled={processing}
+                  <p>Skillset</p>
+                  <Checkbox
+                    label="Communication-Skills"
+                    name="Communication-Skills"
                   />
+                  <Checkbox
+                    label="Engineering-skills"
+                    name="Engineering-Skills"
+                  />
+                  <Checkbox
+                    label="Athletic-skills"
+                    name="Athletic-Skills"
+                  />
+                  <Checkbox
+                    label="Theatre-skills"
+                    name="Theatre-Skills"
+                  />
+                  <Checkbox
+                    label="Artistic-skills"
+                    name="Arstistic-Skills"
+                  />
+                
+
                   <br />
+                  <br />
+                  <p>Input MCSI - "Master Card Scholars ID" Code</p>
+                  <TextArea
+                    style={{ width: '700px', height: '50px' }}
+                  />
                 </Item.Meta>
                 <Divider />
                 <Item.Extra>

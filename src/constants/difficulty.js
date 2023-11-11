@@ -1,22 +1,17 @@
 const DIFFICULTY = [
   {
-    key: '0',
-    text: 'Any Difficulty',
-    value: '0',
-  },
-  {
     key: 'easy',
-    text: 'Easy',
+    text: 'Primary - Elementary',
     value: 'easy',
   },
   {
     key: 'medium',
-    text: 'Medium',
+    text: 'Junior Secondary - Middle School',
     value: 'medium',
   },
   {
     key: 'hard',
-    text: 'Hard',
+    text: 'Senior Secondary - Upper School',
     value: 'hard',
   },
 ];
