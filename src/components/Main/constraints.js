@@ -30,6 +30,7 @@ const Constraints = ({ startQuiz }) => {
   const [numOfQuestions, setNumOfQuestions] = useState(5);
   const [difficulty, setDifficulty] = useState('easy');
   const [questionsType, setQuestionsType] = useState('0');
+  const [showMainContent, setShowMainContent] = useState(false);
   const [countdownTime, setCountdownTime] = useState({
     hours: 0,
     minutes: 120,
@@ -53,6 +54,11 @@ const Constraints = ({ startQuiz }) => {
   ) {
     allFieldsSelected = true;
   }
+
+  const loadMain = () => {
+    setShowMainContent(true);
+  };
+
 
   const fetchData = () => {
     setProcessing(true);
@@ -159,7 +165,7 @@ const Constraints = ({ startQuiz }) => {
                   icon="play"
                   labelPosition="left"
                   content={processing ? 'Processing...' : 'Start Examination'}
-                  onClick={fetchData}
+                  onClick={loadMain}
                   style={{ backgroundColor: 'red'}}
                   disabled={!allFieldsSelected || processing}
                 />
