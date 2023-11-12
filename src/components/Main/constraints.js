@@ -21,6 +21,7 @@ import {
   COUNTDOWN_TIME,
 } from '../../constants';
 import { shuffle } from '../../utils';
+import Finalize from './finalize';
 
 import Offline from '../Offline';
 
@@ -115,6 +116,9 @@ const Constraints = ({ startQuiz }) => {
 
   return (
     <Container>
+          {showMainContent ? (
+        <Finalize />
+      ) : (
       <Segment>
         <Item.Group divided>
           <Item>
@@ -164,6 +168,7 @@ const Constraints = ({ startQuiz }) => {
           </Item>
         </Item.Group>
       </Segment>
+          )}
       <br />
     </Container>
   );
