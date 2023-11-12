@@ -3,7 +3,7 @@ import { Container, Segment, Item, Message, Divider, Image } from 'semantic-ui-r
 import thank from '../../images/thank.gif';  // Import your PNG logo
 
 import msLogo from '../../images/mastercardscholarslogo.png'
-const YourComponent = () => {
+const Finalize = () => {
   const [error, setError] = useState(null);
 
   return (
@@ -44,4 +44,4 @@ const YourComponent = () => {
   );
 };
 
-export default YourComponent;
+export default Finalize;
