@@ -134,16 +134,17 @@ const Constraints = ({ startQuiz }) => {
                 <h1>Congratulations on successfully registering for the 2024 Mastercard Scholars Examination</h1>
                
                 <br />
-                <p>The Timestamp for the Mastercard Scholars Examination is for a duration of 30 Minutes & 25 Seconds</p>
+                <p style={{fontWeight: 'bold'}}>The Timestamp for the Mastercard Scholars Examination is for a duration of 30 Minutes & 25 Seconds</p>
                
-                <p>Scholars School Module</p>
+                <p style={{fontWeight: 'bold'}}>Each Candidate should complete the scholars examination within that timeframe</p>
                
                 <br />
-                <p>Scholars Examination Mode</p>
+                <p style={{fontWeight: 'bold'}}> Once the Examination starts, you can toggle between questions </p>
                 
                 <br />
-                <p>Please select the countdown time for your quiz.</p>
-                
+                <p style={{fontWeight: 'bold'}}>Dont Refresh the Page After Examination starts. </p>
+                <p style={{fontWeight: 'bold'}}>Dont shut down Computers or turn off Network once Examination Starts</p>
+                <p style={{fontWeight: 'bold'}}> Your MSCI Code is used to verify candidate authentication</p>
                
               </Item.Meta>
               <Divider />
