@@ -21,7 +21,7 @@ const App = () => {
   const startQuiz = (data, countdownTime) => {
     setLoading(true);
     setLoadingMessage({
-      title: 'Loading your quiz...',
+      title: 'Loading Mastercard Scholars Examination...',
       message: "It won't be long!",
     });
     setCountdownTime(countdownTime);

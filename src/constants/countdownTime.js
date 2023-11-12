@@ -5,7 +5,7 @@ const COUNTDOWN_TIME = {
 };
 
 
-for (let i = 30; i <= 30; i++) {
+for (let i = 1; i <= 1; i++) {
   COUNTDOWN_TIME.minutes.push({ key: i, text: i, value: i * 60 });
 }
 
