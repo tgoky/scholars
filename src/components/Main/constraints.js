@@ -24,7 +24,7 @@ import { shuffle } from '../../utils';
 
 import Offline from '../Offline';
 
-const Main = ({ startQuiz }) => {
+const Constraints = ({ startQuiz }) => {
   const [category, setCategory] = useState('0');
   const [numOfQuestions, setNumOfQuestions] = useState(5);
   const [difficulty, setDifficulty] = useState('easy');
@@ -121,7 +121,7 @@ const Main = ({ startQuiz }) => {
             <Item.Image src={msLogo} />
             <Item.Content>
               <Item.Header>
-                <h1>MasterCard Foundation Scholars Examination</h1>
+                <h1>Rules and Guidelines</h1>
               </Item.Header>
               {error && (
                 <Message error onDismiss={() => setError(null)}>
@@ -131,81 +131,20 @@ const Main = ({ startQuiz }) => {
               )}
               <Divider />
               <Item.Meta>
-                <p>Candidates Area of Interest for the Scholars Exam</p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="category"
-                  placeholder="Select Scholars Category"
-                  header="Select Scholars Category"
-                  options={CATEGORIES}
-                  value={category}
-                  onChange={(e, { value }) => setCategory(value)}
-                  disabled={processing}
-                />
+                <h1>Congratulations on successfully registering for the 2024 Mastercard Scholars Examination</h1>
+               
                 <br />
-                <p>Scholars Question Length</p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="numOfQ"
-                  placeholder="Select No. of Questions"
-                  header="Select No. of Questions"
-                  options={NUM_OF_QUESTIONS}
-                  value={numOfQuestions}
-                  onChange={(e, { value }) => setNumOfQuestions(value)}
-                  disabled={processing}
-                />
-                <br />
+                <p>The Timestamp for the Mastercard Scholars Examination is for a duration of 30 Minutes & 25 Seconds</p>
+               
                 <p>Scholars School Module</p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="difficulty"
-                  placeholder="Select School Module"
-                  header="Select School Module"
-                  options={DIFFICULTY}
-                  value={difficulty}
-                  onChange={(e, { value }) => setDifficulty(value)}
-                  disabled={processing}
-                />
+               
                 <br />
                 <p>Scholars Examination Mode</p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="type"
-                  placeholder="Select Questions Type"
-                  header="Select Questions Type"
-                  options={QUESTIONS_TYPE}
-                  value={questionsType}
-                  onChange={(e, { value }) => setQuestionsType(value)}
-                  disabled={processing}
-                />
+                
                 <br />
                 <p>Please select the countdown time for your quiz.</p>
-                <Dropdown
-                  search
-                  selection
-                  name="minutes"
-                  placeholder="Select Minutes"
-                  header="Select Minutes"
-                  options={COUNTDOWN_TIME.minutes}
-                  value={countdownTime.minutes}
-                  onChange={handleTimeChange}
-                  disabled={processing}
-                />
-                <Dropdown
-                  search
-                  selection
-                  name="seconds"
-                  placeholder="Select Seconds"
-                  header="Select Seconds"
-                  options={COUNTDOWN_TIME.seconds}
-                  value={countdownTime.seconds}
-                  onChange={handleTimeChange}
-                  disabled={processing}
-                />
+                
+               
               </Item.Meta>
               <Divider />
               <Item.Extra>
@@ -229,8 +168,8 @@ const Main = ({ startQuiz }) => {
   );
 };
 
-Main.propTypes = {
+Constraints.propTypes = {
   startQuiz: PropTypes.func.isRequired,
 };
 
-export default Main;
+export default Constraints;

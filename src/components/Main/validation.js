@@ -15,6 +15,7 @@ import {
 import mindImg from '../../images/mind.svg';
 import msLogo from '../../images/mastercardscholarslogo.png'
 import Main from '../Main';
+import Constraints from './constraints';
 import {
   GRADE_LEVEL,
   NUM_OF_QUESTIONS,
@@ -125,7 +126,7 @@ const Validation = ({ startQuiz }) => {
   return (
     <Container>
       {showMainContent ? (
-        <Main />
+        <Constraints />
       ) : (
         <Segment>
           <Item.Group divided>
@@ -220,7 +221,7 @@ const Validation = ({ startQuiz }) => {
                     icon="play"
                     labelPosition="left"
                     style={{ backgroundColor: 'orange'}}
-                    content={'Submit'}
+                    content={'Proceed'}
                     onClick={loadMain}
                   />
                 </Item.Extra>

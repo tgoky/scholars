@@ -205,7 +205,7 @@ const Registration = ({ startQuiz }) => {
                     icon="play"
                     labelPosition="left"
                     style={{ backgroundColor: 'orange'}}
-                    content={'Submit'}
+                    content={'Proceed'}
                     onClick={loadMain}
                   />
                 </Item.Extra>
